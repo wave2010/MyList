@@ -15,5 +15,7 @@ public interface MyList<E> {
 	boolean equals(Object o);
 
 	int indexOf(E e);
+	
+	String toString();
 
 }

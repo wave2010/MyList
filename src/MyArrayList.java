@@ -2,7 +2,7 @@
 public class MyArrayList<E> implements MyList<E> {
 
 	int count =0;
-	public Object[] array = new Object[count];
+	public Object[] array = new Object[100];
 
 	@Override
 	public int size() {
@@ -20,21 +20,13 @@ public class MyArrayList<E> implements MyList<E> {
 
 	@Override
 	public boolean contain(E e) {
-		boolean flag = false;
-		for (Object ob : array) {
-			if (ob == e) {
-				flag = true;
-			} else {
-				flag = false;
-			}
-		}
-		return flag;
+	return indexOf(e)>=0;
 	}
 		
 
 	@Override
 	public boolean add(E e) {
-		array[size() + 1] = e;
+		array[size()] = e;
 		count++;
 		return true;
 	}
@@ -78,18 +70,17 @@ public class MyArrayList<E> implements MyList<E> {
 			}
 
 		}
-		return equals(obj);
+		return true;
 	}
 
 	@Override
 	public int indexOf(E e) {
-		int index = -1;
 
-		for (int i = 0; i < array.length; i++) {
-			if (array[i].equals(e)) {
-				index = i;
+		for (int i = 0; i < count; i++) {
+			if (e.equals(array[i])) {
+				return i;
 			}
 		}
-		return index;
+		return -1;
 	}
 }
