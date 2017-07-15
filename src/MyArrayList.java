@@ -26,19 +26,15 @@ public class MyArrayList<E> implements MyList<E> {
 			} else {
 				flag = false;
 			}
-
 		}
 		return flag;
 	}
 
 	@Override
 	public boolean add(E e) {
-
 		array[size() + 1] = e;
-
 		count++;
-		return false;
-
+		return true;
 	}
 
 	@Override
@@ -51,34 +47,44 @@ public class MyArrayList<E> implements MyList<E> {
 				array[i] = null;
 				flag = true;
 			}
-
 		}
 		return flag;
 	}
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
+		for (Object ob : array) {
 			ob = null;
 		}
-
 	}
-	
 
 	@Override
 	public boolean equals(Object obj) {
-		for (int i = 0; i < array.length; i++) {
-			if(array[i] == obj){
-				
+		int i = 0;
+		if (obj instanceof MyArrayList<?>) {
+			MyArrayList<Object> c = (MyArrayList<Object>) obj;
+			while (i < count) {
+				if (c.contain(this.array[i])) {
+					i++;
+
+				} else {
+					return false;
+				}
 			}
+
 		}
 		return equals(obj);
 	}
 
 	@Override
 	public int indexOf(E e) {
-		// TODO Auto-generated method stub
+		int index = -1;
+
+		for (int i = 0; i < array.length; i++) {
+			if (array[i].equals(e)) {
+				index = i;
+			}
+		}
 		return index;
 	}
-
 }
