@@ -1,16 +1,20 @@
 
 public class MyArrayList<E> implements MyList<E> {
 
+	int count = 0;
+
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return count;
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		boolean flag = false;
+		if (count == 0) {
+			flag = true;
+		}
+		return flag;
 	}
 
 	@Override
@@ -21,13 +25,14 @@ public class MyArrayList<E> implements MyList<E> {
 
 	@Override
 	public boolean add(E e) {
-		// TODO Auto-generated method stub
+
+		count++;
 		return false;
 	}
 
 	@Override
 	public boolean remove(E e) {
-		// TODO Auto-generated method stub
+		count--;
 		return false;
 	}
 
