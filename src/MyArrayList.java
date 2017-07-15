@@ -92,9 +92,7 @@ public class MyArrayList<E> implements MyList<E> {
 			}
 			
 		}
-		return stb.toString();
-	
-			
+		return stb.toString();		
 	}
 
 	@Override

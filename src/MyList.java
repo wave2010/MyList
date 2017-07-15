@@ -19,5 +19,6 @@ public interface MyList<E> {
 	String toString();
 	
 	void replaceAll(E e);
+	void
 
 }
