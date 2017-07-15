@@ -12,10 +12,9 @@ public class Main {
 
 		ls2.add("A");
 		ls2.add("C");
-		ls2.add("D");
-		
+		ls2.add("D");	
 		ls2.remove("D");
-		
+		System.out.println(ls2.toString());
 		
 		
 

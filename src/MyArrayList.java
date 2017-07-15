@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class MyArrayList<E> implements MyList<E> {
 
@@ -35,15 +36,12 @@ public class MyArrayList<E> implements MyList<E> {
 	public boolean remove(E e) {
 
 		boolean flag = false;
-		for (int i = (array.length - 1); i > 0; i--) {
-			if (array[i].equals(e)) {
-				
-				count--;
+		for (int i = (count-1); i > 0; i--) {
+			if (e.equals(array[i])) {	
 				array[i]=null;
+				count--;
 				flag=true;
 			}
-				array[i] = null;
-				flag = true;
 		}
 		return flag;
 	}
@@ -83,4 +81,13 @@ public class MyArrayList<E> implements MyList<E> {
 		}
 		return -1;
 	}
+
+	@Override
+	public String toString() {
+		return "MyArrayList [array=" + Arrays.toString(array) + "]";
+	}
+	
+	
+	
+	
 }
