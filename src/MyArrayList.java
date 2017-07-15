@@ -1,6 +1,7 @@
 
 public class MyArrayList<E> implements MyList<E> {
-	int count = 0;
+
+	int count =0;
 	public Object[] array = new Object[count];
 
 	@Override
@@ -29,6 +30,7 @@ public class MyArrayList<E> implements MyList<E> {
 		}
 		return flag;
 	}
+		
 
 	@Override
 	public boolean add(E e) {
@@ -43,10 +45,13 @@ public class MyArrayList<E> implements MyList<E> {
 		boolean flag = false;
 		for (int i = (array.length - 1); i > 0; i--) {
 			if (array[i].equals(e)) {
+				
 				count--;
+				array[i]=null;
+				flag=true;
+			}
 				array[i] = null;
 				flag = true;
-			}
 		}
 		return flag;
 	}
