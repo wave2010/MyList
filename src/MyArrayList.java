@@ -1,23 +1,8 @@
 
-public class MyArrayList<E> implements MyList<E> {
-
+public class MyArrayList<E> implements MyList<E>
+{
 	int count = 0;
-	public E[] array= new E(count);
-
-	capacity=0;
-	private static final int INIT_CAPACITY = 10;
-
-	E[] array = new E[10];
-
-	public MyArrayList() {
-
-		this(INIT_CAPACITY);
-	}
-
-	public MyArrayList(int initCapacity) {
-		 capacity = initCapacity;
-		array = = (E[]) new Object[capacity];
-	}
+	public Object[] array= new Object[count];
 
 	@Override
 	public int size() {
@@ -57,7 +42,7 @@ public class MyArrayList<E> implements MyList<E> {
 		{
 			if(array[i].equals(e) )
 			{
-				count--;
+				
 				array[i]=null;
 				flag=true;
 			}
@@ -68,16 +53,13 @@ public class MyArrayList<E> implements MyList<E> {
 
 	@Override
 	public void clear() {
-
-		for(E e : this.){
-			
-		}
+		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public int indexOf(E e) {
-
+		// TODO Auto-generated method stub
 		return 0;
 	}
 
