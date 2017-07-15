@@ -10,11 +10,9 @@ public class Main {
 		
 		MyArrayList<String> ls2 = new MyArrayList<>();
 
-		ls2.add("E");
-		ls2.add("C");
-		ls2.add("D");	
 	//	ls2.remove("D");
-		System.out.println(ls2.toString());
+		ls.fill("S");
+		System.out.println(ls);
 		
 		
 

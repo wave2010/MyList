@@ -17,5 +17,7 @@ public interface MyList<E> {
 	int indexOf(E e);
 
 	String toString();
+	
+	void fill(E e);
 
 }
