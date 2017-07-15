@@ -1,8 +1,7 @@
 
-public class MyArrayList<E> implements MyList<E>
-{
+public class MyArrayList<E> implements MyList<E> {
 	int count = 0;
-	public Object[] array= new Object[count];
+	public Object[] array = new Object[count];
 
 	@Override
 	public int size() {
@@ -20,33 +19,39 @@ public class MyArrayList<E> implements MyList<E>
 
 	@Override
 	public boolean contain(E e) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean flag = false;
+		for (Object ob : array) {
+			if (ob == e) {
+				flag = true;
+			} else {
+				flag = false;
+			}
+
+		}
+		return flag;
 	}
 
 	@Override
 	public boolean add(E e) {
 
+		array[size() + 1] = e;
+
 		count++;
-		
-		
 		return false;
-		
+
 	}
 
 	@Override
 	public boolean remove(E e) {
-		
-		boolean flag=false;
-		for(int i=(array.length-1);i>0;i--)
-		{
-			if(array[i].equals(e) )
-			{
-				
-				array[i]=null;
-				flag=true;
+
+		boolean flag = false;
+		for (int i = (array.length - 1); i > 0; i--) {
+			if (array[i].equals(e)) {
+				count--;
+				array[i] = null;
+				flag = true;
 			}
-			
+
 		}
 		return flag;
 	}
@@ -54,13 +59,26 @@ public class MyArrayList<E> implements MyList<E>
 	@Override
 	public void clear() {
 		// TODO Auto-generated method stub
+			ob = null;
+		}
 
+	}
+	
+
+	@Override
+	public boolean equals(Object obj) {
+		for (int i = 0; i < array.length; i++) {
+			if(array[i] == obj){
+				
+			}
+		}
+		return equals(obj);
 	}
 
 	@Override
 	public int indexOf(E e) {
 		// TODO Auto-generated method stub
-		return 0;
+		return index;
 	}
 
 }
