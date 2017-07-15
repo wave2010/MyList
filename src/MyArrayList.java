@@ -84,7 +84,17 @@ public class MyArrayList<E> implements MyList<E> {
 
 	@Override
 	public String toString() {
-		return "MyArrayList [array=" + Arrays.toString(array) + "]";
+		StringBuilder stb=new StringBuilder();
+		for (int i = 0; i < count; i++) {
+			if(array[i]!=null)
+			{
+				stb.append(array[i]).append(" ");	
+			}
+			
+		}
+		return stb.toString();
+	
+			
 	}
 	
 	
