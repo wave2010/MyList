@@ -18,6 +18,6 @@ public interface MyList<E> {
 
 	String toString();
 	
-	void fill(E e);
+	void replaceAll(E e);
 
 }

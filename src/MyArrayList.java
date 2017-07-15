@@ -98,7 +98,7 @@ public class MyArrayList<E> implements MyList<E> {
 	}
 
 	@Override
-	public void fill(E e) {
+	public void replaceAll(E e) {
 		// TODO Auto-generated method stub
 		for (int i = 0; i <count; i++) {
 			array[i]=e;
