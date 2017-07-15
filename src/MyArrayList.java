@@ -3,6 +3,21 @@ public class MyArrayList<E> implements MyList<E> {
 
 	int count = 0;
 
+	capacity=0;
+	private static final int INIT_CAPACITY = 10;
+
+	E[] array = new E[10];
+
+	public MyArrayList() {
+
+		this(INIT_CAPACITY);
+	}
+
+	public MyArrayList(int initCapacity) {
+		 capacity = initCapacity;
+		array = = (E[]) new Object[capacity];
+	}
+
 	@Override
 	public int size() {
 		return count;
@@ -32,19 +47,23 @@ public class MyArrayList<E> implements MyList<E> {
 
 	@Override
 	public boolean remove(E e) {
+
 		count--;
 		return false;
 	}
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
+
+		for(E e : this.){
+			
+		}
 
 	}
 
 	@Override
 	public int indexOf(E e) {
-		// TODO Auto-generated method stub
+
 		return 0;
 	}
 
