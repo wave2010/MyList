@@ -2,6 +2,7 @@
 public class MyArrayList<E> implements MyList<E> {
 
 	int count = 0;
+	public E[] array= new E(count);
 
 	capacity=0;
 	private static final int INIT_CAPACITY = 10;
@@ -42,14 +43,27 @@ public class MyArrayList<E> implements MyList<E> {
 	public boolean add(E e) {
 
 		count++;
+		
+		
 		return false;
+		
 	}
 
 	@Override
 	public boolean remove(E e) {
-
-		count--;
-		return false;
+		
+		boolean flag=false;
+		for(int i=(array.length-1);i>0;i--)
+		{
+			if(array[i].equals(e) )
+			{
+				count--;
+				array[i]=null;
+				flag=true;
+			}
+			
+		}
+		return flag;
 	}
 
 	@Override
